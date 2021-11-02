@@ -12,7 +12,9 @@
         bg %n #使其后台继续执行
         fg %n #n为进行pid
 如果将后台命令转为前台命令，使用fg %n。n为任务的pid，使用jobs或者ps均可查到。
-
+### conda
+                conda activate pytorch-gpu
+                jupyter notebook --port 8889
 ### pytorch 安装
 - 服务器现在最高支持 
 -
@@ -24,6 +26,8 @@
                 print(torch.version.cuda)
                 print(torch.cuda.is_available())
 
+- import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 - drop
 删除表中的某一行或者某一列更明智的方法是使用drop，它不改变原有的df中的数据，而是返回另一个dataframe来存放删除后的数据。
 
